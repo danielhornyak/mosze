@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/mosze/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\mosze.dir\\main.cpp.obj -c C:\\mosze\\main.cpp",
+  "file": "C:\\mosze\\main.cpp"
+}
+]
