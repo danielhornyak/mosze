@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       COMPOSE_FILE: .ci/docker-compose.yml
-      DOCKER_USER: ${{ secrets.nagysas }}
-      DOCKER_PASS: ${{ secrets.dckr_pat_kb5XpUrka98fqMhVBPrErSonaP4 }}
+      DOCKER_USER: ${{ nagysas }}
+      DOCKER_PASS: ${{ dckr_pat_kb5XpUrka98fqMhVBPrErSonaP4 }}
 
     steps:
     - name: Checkout code
