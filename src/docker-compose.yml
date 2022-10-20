@@ -6,3 +6,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    test:
+      context: .
+      dockerfile: ./Dockerfile

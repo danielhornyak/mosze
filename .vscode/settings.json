@@ -27,5 +27,6 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ]
+  ],
+  "cmake.sourceDirectory": "${workspaceFolder}/src"
 }
