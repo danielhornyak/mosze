@@ -5,6 +5,8 @@ include(CTest)
 enable_testing()
 
 add_executable(mosze main.cpp)
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/story.txt
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
