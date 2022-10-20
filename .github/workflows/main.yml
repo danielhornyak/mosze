@@ -9,15 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       COMPOSE_FILE: .ci/docker-compose.yml
-      DOCKER_USER: ${{ nagysas }}
-      DOCKER_PASS: ${{ dckr_pat_kb5XpUrka98fqMhVBPrErSonaP4 }}
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Login to DockerHub
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      run: docker login -u nagysas -p dckr_pat_uEyI0OES2bLTQzmTx9RBEbSro_E
 
     - name: Build docker images
       run: docker-compose build
