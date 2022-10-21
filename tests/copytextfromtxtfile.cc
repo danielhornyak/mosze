@@ -4,9 +4,9 @@
 TEST(copytextfromtxtc, Handelsallinputs) {
   CopyTextFromAFile object1;
   ASSERT_EQ(object1.copy_given_chapter(0),"nincs ilyen chapter");
-  ASSERT_EQ(object1.copy_given_chapter(1),"\r\rsdtfgzudszgafgzesd\r\r");
-  ASSERT_EQ(object1.copy_given_chapter(2),"\r\rsdatzfzufsda\r\r");
-  ASSERT_EQ(object1.copy_given_chapter(3),"\r\rfzuestgauihsaedfzu");
+  ASSERT_EQ(object1.copy_given_chapter(1),"sdtfgzudszgafgzesd");
+  ASSERT_EQ(object1.copy_given_chapter(2),"sdatzfzufsda");
+  ASSERT_EQ(object1.copy_given_chapter(3),"fzuestgauihsaedfzu");
 }
 
 
