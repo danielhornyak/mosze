@@ -8,12 +8,15 @@ FROM gcc:latest
 # These commands copy your files into the specified directory in the image
 # and set that as the working location
 COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp/src
+WORKDIR /usr/src/myapp/
 
+RUN apt-get update
 RUN apt-get update && apt-get install -y cmake libgtest-dev libboost-test-dev && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install ninja-build
 
 # This command compiles your app using GCC, adjust for your source code
-#RUN cmake .
+RUN cmake . --debug-output -G Ninja
+RUN ctest -j10 -C Debug -T test --output-on-failure
 
 # This command runs your application, comment out this line to compile only
 #CMD ["./myapp"]
