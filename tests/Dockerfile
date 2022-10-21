@@ -10,13 +10,15 @@ FROM gcc:latest
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp/
 
-RUN apt-get update
+#RUN apt-get update
 RUN apt-get update && apt-get install -y cmake libgtest-dev libboost-test-dev && rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install ninja-build
 
 # This command compiles your app using GCC, adjust for your source code
 RUN cmake . --debug-output -G Ninja
 RUN cmake --build .
+RUN apt-get update && apt-get install dos2unix
+RUN dos2unix story.txt
 RUN ctest -j10 -C Debug -T test --output-on-failure
 
 # This command runs your application, comment out this line to compile only
