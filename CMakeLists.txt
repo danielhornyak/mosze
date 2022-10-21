@@ -7,5 +7,5 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 enable_testing()
 
-add_subdirectory(src)
 add_subdirectory(tests)
+add_subdirectory(src)

@@ -3,6 +3,8 @@ version: '3.4'
 services:
   mosze:
     image: mosze
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    build: ./src
+  teszt:
+    image: teszt
+    command: ctest -j10 -C Debug -T test --output-on-failure
+    build: ./tests

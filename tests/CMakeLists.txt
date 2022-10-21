@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(mosze VERSION 0.1.0)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+enable_testing()
 include(CPack)
 include(FetchContent)
 
@@ -22,9 +28,8 @@ target_link_libraries(
 )
 
 include(GoogleTest)
-#gtest_discover_tests(copytextfromtxtfile)
-
-file(COPY ${CMAKE_BINARY_DIR}/src/story.txt
+gtest_discover_tests(copytextfromtxtfile)
+#ADD_TEST(copytextfromtxtc
+#"${CMAKE_COMMAND}" --build ${CMAKE_BINARY_DIR} --target copytextfromtxtfile)
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/story.txt
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-ADD_TEST(ctest_build_test_code
-"${CMAKE_COMMAND}" --build ${CMAKE_BINARY_DIR} --target copytextfromtxtfile)

@@ -16,10 +16,11 @@ RUN apt-get update && apt-get install ninja-build
 
 # This command compiles your app using GCC, adjust for your source code
 RUN cmake . --debug-output -G Ninja
-RUN ctest -j10 -C Debug -T test --output-on-failure
+#RUN cmake --build .
+#RUN ctest -j10 -C Debug -T test --output-on-failure
 
 # This command runs your application, comment out this line to compile only
-#CMD ["./myapp"]
+CMD ["./myapp"]
 
 LABEL Name=mosze Version=0.0.1
 
