@@ -20,6 +20,6 @@ jobs:
       run: docker login -u $DOCKER_USER -p $DOCKER_PASS
 
     - name: Build docker images
-      run: docker-compose mosze
+      run: docker-compose build mosze
     - name: Docker test
-      run: docker-compose teszt
+      run: docker-compose build teszt
