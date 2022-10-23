@@ -1,3 +1,4 @@
+
 name: Test
 on:
   pull_request:
@@ -23,3 +24,5 @@ jobs:
       run: docker-compose build mosze
     - name: Docker test
       run: docker-compose build teszt
+    - name: Valgrind test
+      run: Docker valgrind
