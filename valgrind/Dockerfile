@@ -9,7 +9,12 @@ FROM debian:stretch
 # Update package manager
 RUN apt-get update
 RUN apt-get upgrade -y
+
+# Has stuff like gcc, make, and libc6-dev
 RUN apt-get install -y build-essential
+
+# Valgrind!
+RUN apt-get install -y valgrind
 
 # These commands copy your files into the specified directory in the image
 # and set that as the working location
@@ -18,10 +23,7 @@ WORKDIR /usr/src/myapp
 
 # This command compiles your app using GCC, adjust for your source code
 RUN g++ -o myapp main.cpp
-
-
-# This command runs your application, comment out this line to compile only
-CMD ["./myapp"]
+RUN valgrind --leak-check=full ./myapp
 
 LABEL Name=mosze Version=0.0.1
 

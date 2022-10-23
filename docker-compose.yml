@@ -6,5 +6,7 @@ services:
     build: ./src
   teszt:
     image: teszt
-    command: ctest -j10 -C Debug -T test --output-on-failure
     build: ./tests
+  valgrind:
+    image: valgrind
+    build: ./valgrind
