@@ -25,4 +25,4 @@ jobs:
     - name: Docker test
       run: docker-compose build teszt
     - name: Valgrind test
-      run: Docker valgrind
+      run: docker-compose build valgrind
