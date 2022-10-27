@@ -1,0 +1,10 @@
+1~Innen kezdŐdik a jÁtÉk, (insert interesting story starter here)#2~opcio1#3~opcio2#4~opcio3
+2~elerted az opcio 1-et, szeepmunka#5~opcio11#6~opcio12
+3~elerted az opcio 2-ot, szeepmunka#7~opcio21#8~opcio22
+4~elerted az opcio 3-at, szeepmunka
+5~elerted az opcio11-t
+6~elerted az opcio12-t
+7~elerted az opcio21-t
+8~elerted az opcio22-t#9~opcio221#10~opcio222
+9~ez itten az opcio221
+10~ez pedig itten az opcio222
